@@ -49,6 +49,7 @@ public class DLPTemplateHelper {
     JsonObject kekConfig =
         gson.fromJson(getKekDetails(gcsBucket), new TypeToken<JsonObject>() {}.getType());
     JsonElement kek = kekConfig.get("ciphertext");
+
     // take out version -DLP template does not allow
     String keyName =
         gson.toJson((kekConfig.get("name").getAsString().split("/cryptoKeyVersions/")[0]));
@@ -96,7 +97,10 @@ public class DLPTemplateHelper {
     } catch (Exception e) {
       LOG.error("Unable to read {} file from the resources folder!", DLP_DEID_CONFIG_FILE, e);
     }
-
     return schemaJson;
+  }
+
+  public int adder(int a, int b) {
+    return a+b;
   }
 }
