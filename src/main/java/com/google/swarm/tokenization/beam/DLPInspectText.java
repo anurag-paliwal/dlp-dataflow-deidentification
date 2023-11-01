@@ -26,7 +26,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import javax.annotation.Nullable;
-import org.apache.beam.sdk.annotations.Experimental;
 import org.apache.beam.sdk.metrics.Counter;
 import org.apache.beam.sdk.metrics.Metrics;
 import org.apache.beam.sdk.transforms.DoFn;
@@ -63,7 +62,6 @@ import org.slf4j.LoggerFactory;
  *
  * <p>Batch size defines how big are batches sent to DLP at once in bytes.
  */
-@Experimental
 @AutoValue
 public abstract class DLPInspectText
     extends PTransform<

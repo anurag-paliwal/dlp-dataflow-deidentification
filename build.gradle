@@ -80,7 +80,7 @@ repositories {
 
 dependencies {
     ext {
-        dataflowBeamVersion = '2.46.0'
+        dataflowBeamVersion = '2.51.0'
     }
 
     implementation group: 'org.apache.beam', name: 'beam-sdks-java-core', version: dataflowBeamVersion

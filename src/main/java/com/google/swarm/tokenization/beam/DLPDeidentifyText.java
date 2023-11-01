@@ -32,7 +32,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import javax.annotation.Nullable;
-import org.apache.beam.sdk.annotations.Experimental;
 import org.apache.beam.sdk.metrics.Counter;
 import org.apache.beam.sdk.metrics.Metrics;
 import org.apache.beam.sdk.transforms.DoFn;
@@ -67,7 +66,6 @@ import org.slf4j.LoggerFactory;
  * contents as value) and outputs {@link KV} of {@link String} (eg. filename) and {@link
  * DeidentifyContentResponse}, which will contain {@link Table} of results for the user to consume.
  */
-@Experimental
 @AutoValue
 public abstract class DLPDeidentifyText
     extends PTransform<
