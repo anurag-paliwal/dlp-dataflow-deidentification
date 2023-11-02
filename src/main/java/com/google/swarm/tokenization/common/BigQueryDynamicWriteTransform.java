@@ -75,9 +75,9 @@ public abstract class BigQueryDynamicWriteTransform
             .withWriteDisposition(WriteDisposition.WRITE_APPEND)
             .withoutValidation()
             .ignoreInsertIds()
-            .withCreateDisposition(CreateDisposition.CREATE_IF_NEEDED);
+            .withCreateDisposition(CreateDisposition.CREATE_NEVER);
 
-    if (input.getPipeline().getOptions().as(StreamingOptions.class).isStreaming() && !input.getPipeline().getOptions().as(BigQueryOptions.class).getUseStorageWriteApi()) {
+    if (input.getPipeline().getOptions().as(StreamingOptions.class).isStreaming()) {
       transform = transform.withAutoSharding();
     }
 
